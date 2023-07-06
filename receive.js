@@ -5,7 +5,7 @@ const putAsterisks = require('./putasterisks12')
 
 const RABBIT_SETTINGS = {
     protocol: 'amqp',
-    hostname: 'rabbit-mx-admin-dev.fabricmedia.ru',
+    hostname: 'rabbit-mx-admin-dev.media.ru',
     port: 5672,
     username: 'developer',
     password: 'o3nFMLoaz899xNKPxk3xdLDUPoGt2Cup',
