@@ -16,7 +16,7 @@ module.exports = function putAsterisks(footnotes, sentence) {
     let regex = new RegExp('((^|[' + spaces + '])' + alternatives.join('|') + ')($|[' + spaces + '])', 'mig');
 
     let matches = [...sentence.matchAll(regex)];
-    console.log('matches :>> ', matches);
+    
     // бежим по массиву совпадений
     for (let index = 0; index < matches.length; index++) {
 
@@ -38,7 +38,7 @@ module.exports = function putAsterisks(footnotes, sentence) {
         }
     }
    
-    console.log('firstArr :>> ', firstArr);
+    
 
     let catTypes = [];
 
@@ -60,7 +60,6 @@ module.exports = function putAsterisks(footnotes, sentence) {
         
         
         let moreThanONe = separatedArr[index].map(el => el.mathed)
-        console.log('moreThanONe :>> ', moreThanONe);
         moreThanONe.forEach((w) => finalSentence = finalSentence.replace(w, w + '*'.repeat(parseInt(index) + 1)))
     }
 
