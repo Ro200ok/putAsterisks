@@ -1,6 +1,6 @@
 const amqp = require("amqplib");
 const footnotes = require("./footnotes");
-const putAsterisks = require('./putasterisks12')
+const putAsterisks = require('./putasterisks')
 
 
 const RABBIT_SETTINGS = {

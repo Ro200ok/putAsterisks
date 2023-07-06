@@ -8,7 +8,7 @@ module.exports = function putAsterisks(footnotes, sentence) {
     let alternatives = []
     let firstArr = []
     
-
+    // пробегаемся по словарю, сканируем текст предмет вхождений
     footnotes.forEach(element => {
         alternatives.push(Object.values(element.sourceText))
     });
@@ -17,13 +17,12 @@ module.exports = function putAsterisks(footnotes, sentence) {
 
     let matches = [...sentence.matchAll(regex)];
     console.log('matches :>> ', matches);
-
+    // бежим по массиву совпадений
     for (let index = 0; index < matches.length; index++) {
 
         let tmp = matches[index][1].trim();
-        // tmp = tmp.replace(/['«»"]+/g, '')   
         let startIndex = matches[index].index;
-
+        
         for (let ftn = 0; ftn < footnotes.length; ftn++) {
 
             if (Object.values(footnotes[ftn].sourceText).includes(tmp) && footnotes[ftn].solve === false) {
